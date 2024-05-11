@@ -24,12 +24,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createTableQuery = ("CREATE TABLE $TABLE_NAME (" +
-                "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " + // Corrected AUTOINCREMENT syntax
+                "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "$COLUMN_FIRSTNAME TEXT, " +
                 "$COLUMN_LASTNAME TEXT, " +
                 "$COLUMN_AGE INTEGER, " + // Changed NUMBER to INTEGER
                 "$COLUMN_EMAIL TEXT, " +
-                "$COLUMN_USERNAME TEXT, " + // Added missing comma
+                "$COLUMN_USERNAME TEXT, " +
                 "$COLUMN_PASSWORD TEXT)")
         db?.execSQL(createTableQuery)
     }

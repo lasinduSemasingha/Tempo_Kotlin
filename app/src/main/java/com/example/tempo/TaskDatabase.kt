@@ -12,13 +12,25 @@ class TaskDatabase(context: Context) : SQLiteOpenHelper(context,
         private const val DATABASE_NAME = "tasks"
         private const val DATABASE_VERSION = 1
         private const val TABLE_NAME = "taskList"
-
+        private const val ID = "id"
+        private const val TASK_NAME = "taskName"
+        private const val TASK_DESCRIPTION = "taskDescription"
+        private const val TASK_PRIORITY = "taskPriority"
+        private const val TASK_DEADLINE = "taskDeadline"
     }
     override fun onCreate(db: SQLiteDatabase?) {
-        TODO("Not yet implemented")
+        val createTableQuery = ("CREATE TABLE ${TaskDatabase.TABLE_NAME} (" +
+                "${TaskDatabase.ID} INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "${TaskDatabase.TASK_NAME} TEXT, " +
+                "${TaskDatabase.TASK_DESCRIPTION} TEXT, " +
+                "${TaskDatabase.TASK_PRIORITY} TEXT, " +
+                "${TaskDatabase.TASK_DEADLINE} TEXT)")
+        db?.execSQL(createTableQuery)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+        val dropTableQuery = "DROP TABLE IF EXISTS ${TaskDatabase.TABLE_NAME}"
+        db?.execSQL(dropTableQuery)
+        onCreate(db)
     }
 }
