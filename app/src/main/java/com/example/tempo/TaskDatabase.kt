@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class TaskDatabase(context: Context) : SQLiteOpenHelper(context,
     DATABASE_NAME, null,
-    DATABASE_VERSION
+    DATABASE_VERSION 
 ) {
     companion object{
         private const val DATABASE_NAME = "tasks"
