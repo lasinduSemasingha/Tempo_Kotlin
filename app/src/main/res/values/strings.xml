@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tempo</string>
+    <string name="titleDescription">Tempo Title</string>
+    <string name="floatButton">Float Button</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="Login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="fName">First Name</string>
+    <string name="lName">Last Name</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="redirect">New to Tempo? Sign Up</string>
+    <string name="lRedirect">Already have a Account? Login</string>
+    <string name="hi">Hi, </string>
+    <string name="available">Available</string>
+    <string name="completed">Completed</string>
+</resources>
